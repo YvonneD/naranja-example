@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+    <title>naraja example</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Yifang Di">
+    <link rel="stylesheet" href="https://unpkg.com/naranja@1.0.1/lib/naranja.min.css">
+    <style type="text/css">
+    .naranja-title {
+        font-size: 1.5em !important;
+    }
+
+    .naranja-parragraph {
+        font-size: 1em !important;
+    }
+    </style>
+</head>
+
+<body>
+    <script src="https://unpkg.com/naranja@1.0.1/lib/naranja.min.js"></script>
+    <script type="text/javascript">
+    naranja().log({
+        title: 'Welcome to Beauty Club',
+        text: 'Get 15% off when you sign up first time',
+        icon: true,
+        timeout: 'keep',
+        buttons: [{
+                text: 'Sign up',
+                click: function(e) {
+                    naranja().success({
+                        title: 'Thank you',
+                        text: 'Accepted'
+                    })
+                }
+            },
+            {
+                text: 'Later',
+                click: function(e) {
+                    naranja().warn({
+                        title: 'Hope to see you again',
+                        text: 'Come back soon'
+                    })
+                }
+            },
+            {
+                text: 'do not show again',
+                click: function(e) {
+                    naranja().error({
+                        title: 'Sorry to disturb',
+                        text: 'Please give me one more chance'
+                    })
+                }
+            }
+        ]
+    });
+    </script>
+</body>
+
+</html>
